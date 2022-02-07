@@ -1,0 +1,54 @@
+h2 {
+    color: #000;
+    text-align: center;
+    font-size: 2em;
+}
+
+.warpper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0px 2px;
+    background: rgb(38, 64, 94);
+    display: inline-block;
+    color: #fff;
+    border-radius: 3px 3px 0px 0px;
+    box-shadow: 0 0.5rem 0.8rem #00000080;
+}
+
+.panels {
+    background: rgb(8, 8, 8);
+    box-shadow: 0 2rem 2rem #00000080;
+    /* min-height: 200px; */
+    width: 100%;
+    max-width: 1500px;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.panel {
+    display: none;
+    animation: fadein .8s;
+}
+
+.radio {
+    display: none;
+}
+
+#one:checked~.panels #one-panel,
+#two:checked~.panels #two-panel {
+    display: block
+}
+
+#one:checked~.tabs #one-tab,
+#two:checked~.tabs #two-tab {
+    background: #5766aaf6;
+    color: #000;
+    border-top: 3px solid #000;
+}

@@ -1,0 +1,82 @@
+/* CSS Code */
+
+
+/* Heading */
+
+body {
+    background-color: rgb(8, 8, 8);
+}
+
+h1 {
+    color: rgb(187, 235, 160);
+    font-size: 45px;
+}
+
+#b1,
+#b2,
+#b3,
+#b4,
+#b5,
+#b6,
+#b7,
+#b8,
+#b9 {
+    width: 80px;
+    height: 52px;
+    margin: auto;
+    /* color: #b6ce98; */
+    border: 1px, solid rgb(245, 7, 7);
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* Reset Button */
+
+#but {
+    box-sizing: border-box;
+    width: 95px;
+    height: 40px;
+    border: 1px solid dodgerblue;
+    margin: auto;
+    border-radius: 4px;
+    background-color: rgb(24, 88, 151);
+    color: #39a883;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#print {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(184, 69, 34);
+    font-size: 30px;
+}
+
+
+/* Main Container */
+
+#main {
+    text-align: center;
+}
+
+.messages {
+    margin: auto;
+    border-radius: 15px;
+    color: rgb(49, 47, 47);
+    text-align: center;
+    width: 15%;
+}
+
+#message {
+    border-radius: 15px;
+    background-color: rgb(136, 197, 136);
+}
+
+
+/* Game Instruction Text */
+
+#results {
+    font-family: Verdana, Tahoma, sans-serif;
+    color: dodgerblue;
+    font-size: 17px;
+}
