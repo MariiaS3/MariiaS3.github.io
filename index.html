@@ -3,73 +3,69 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
 
     <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="szubienica.css" type="text/css" />
-    <script src="szubienica.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&amp;subset=latin-ext" rel="stylesheet">
 
     <!-- CSS file Included -->
     <link rel="stylesheet" type="text/css" href="tic.css">
     <link rel="stylesheet" type="text/css" href="tab.css">
+    <link rel="stylesheet" href="memory.css">
+
     <!-- JavaScript file included -->
     <script src="tic.js"></script>
+    <script src="szubienica.js"></script>
+
+    <!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
 </head>
 
 <body>
     <div class="warpper">
         <input class="radio" id="one" name="group" type="radio" checked>
         <input class="radio" id="two" name="group" type="radio">
+        <input class="radio" id="three" name="group" type="radio">
         <div class="tabs">
             <label class="tab" id="one-tab" for="one">TIC TAC TOE</label>
             <label class="tab" id="two-tab" for="two">Gallows</label>
+            <label class="tab" id="three-tab" for="three">Memory Test</label>
         </div>
         <div class="panels">
             <div class="panel" id="one-panel">
-                <div id="main">
-                    <h1>TIC TAC TOE</h1>
+                <main>
+                    <article>
+                        <div class="grid">
+                            <div class="result">
+                                <h1>TIC TAC TOE</h1>
+                                <div id="X">Player X: 0</div>
+                                <div id="O">Player O: 0</div>
+                            </div>
+                            <div class="box" id="b0"></div>
+                            <div class="box" id="b1"></div>
+                            <div class="box" id="b2"></div>
 
-                    <!-- Game Instructions -->
-                    <div id="results">
-                        <b>Player X:</b>
-                        <b id="resultX"></b>
+                            <div class="box" id="b3"></div>
+                            <div class="box" id="b4"></div>
+                            <div class="box" id="b5"></div>
 
-                        <br>
-                        <br>
-                        <b>Player 0:</b>
-                        <b id="resultO"></b>
-                    </div>
-                    <div class="all"> <br><br>
-                        <!-- 3*3 grid of Boxes -->
-                        <input type="text" style="background-color: rgb(186, 196, 179);" id="b1" onclick="myfunc_1(); myfunc();" readonly>
-                        <input type="text" style="background-color: rgb(186, 196, 179);" id="b2" onclick="myfunc_2(); myfunc();" readonly>
-                        <input type="text" style="background-color: rgb(186, 196, 179);" id="b3" onclick="myfunc_3(); myfunc();" readonly>
-                        <br><br>
-                        <input type="text" style="background-color: rgb(186, 196, 179);" id="b4" onclick="myfunc_4(); myfunc();" readonly>
-                        <input type="text" style="background-color: rgb(186, 196, 179);" id="b5" onclick="myfunc_5(); myfunc();" readonly>
-                        <input type="text" style="background-color: rgb(186, 196, 179);" id="b6" onclick="myfunc_6(); myfunc();" readonly>
-                        <br><br>
-                        <input type="text" style="background-color: rgb(186, 196, 179);" id="b7" onclick="myfunc_7(); myfunc();" readonly>
-                        <input type="text" style="background-color: rgb(186, 196, 179);" id="b8" onclick="myfunc_8(); myfunc();" readonly>
-                        <input type="text" style="background-color: rgb(186, 196, 179);" id="b9" onclick="myfunc_9(); myfunc();" readonly>
-                    </div>
-                    <!-- Grid end here -->
-                    <br>
-                    <div class="messages">
-                        <p id="message"></p>
-                    </div>
-                    <br>
-                    <!-- Button to reset game -->
-                    <button id="but" onclick="my_reload()">
-                                    RESET
-                                </button>
+                            <div class="box" id="b6"></div>
+                            <div class="box" id="b7"></div>
+                            <div class="box" id="b8"></div>
+                            <br>
+                            <div class="messages">
+                            </div>
+                            <br>
+                            <div class="turn">Player X Turn</div>
 
-                    <br><br>
-                    <!-- Space to show player turn -->
-                    <p id="print"></p>
-
-
-                </div>
-
+                            <button onclick="my_reload()">RESET</button>
+                        </div>
+                    </article>
+                </main>
+                <script src="jquery-3.2.1.min.js"></script>
+                <script src="tic.js"></script>
 
             </div>
             <div class="panel" id="two-panel">
@@ -81,7 +77,34 @@
                     <div style="clear:both;"></div>
                 </div>
             </div>
+            <div class="panel" id="three-panel">
+                <main>
+                    <article>
+                        <div class="board">
+
+                            <div class="card" id="c0"></div>
+                            <div class="card" id="c1"></div>
+                            <div class="card" id="c2"></div>
+                            <div class="card" id="c3"></div>
+
+                            <div class="card" id="c4"></div>
+                            <div class="card" id="c5"></div>
+                            <div class="card" id="c6"></div>
+                            <div class="card" id="c7"></div>
+
+                            <div class="card" id="c8"></div>
+                            <div class="card" id="c9"></div>
+                            <div class="card" id="c10"></div>
+                            <div class="card" id="c11"></div>
+                            <div class="score">Turn counter: 0</div>
+                        </div>
+                    </article>
+                </main>
+                <script src="jquery-3.2.1.min.js"></script>
+                <script src=" memory.js "></script>
+            </div>
         </div>
+
     </div>
 
 
