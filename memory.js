@@ -11,7 +11,7 @@ if (los == 0) {
     path = "url(cookies/";
 
 }
-if (los == 0) {
+if (los == 1) {
     val.push({ name: 'e1.png', count: '2' });
     val.push({ name: 'e2.png', count: '2' });
     val.push({ name: 'e3.png', count: '2' });
