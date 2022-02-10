@@ -1,17 +1,7 @@
-var los = Math.floor(Math.random() * 4);
+var los = Math.floor(Math.random() * 3);
 var val = [];
 var path;
 if (los == 0) {
-    val.push({ name: 'ciri.png', count: '2' });
-    val.push({ name: 'geralt.png', count: '2' });
-    val.push({ name: 'jaskier.png', count: '2' });
-    val.push({ name: 'iorweth.png', count: '2' });
-    val.push({ name: 'triss.png', count: '2' });
-    val.push({ name: 'yen.png', count: '2' });
-    path = "url(wiedzmin/";
-
-}
-if (los == 1) {
     val.push({ name: 'c1.png', count: '2' });
     val.push({ name: 'c2.png', count: '2' });
     val.push({ name: 'c3.png', count: '2' });
@@ -21,7 +11,7 @@ if (los == 1) {
     path = "url(cookies/";
 
 }
-if (los == 2) {
+if (los == 0) {
     val.push({ name: 'e1.png', count: '2' });
     val.push({ name: 'e2.png', count: '2' });
     val.push({ name: 'e3.png', count: '2' });
@@ -33,7 +23,7 @@ if (los == 2) {
 
 }
 
-if (los == 3) {
+if (los == 2) {
     val.push({ name: 'p1.png', count: '2' });
     val.push({ name: 'p2.png', count: '2' });
     val.push({ name: 'p3.png', count: '2' });
