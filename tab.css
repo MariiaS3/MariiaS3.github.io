@@ -1,28 +1,36 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+  
+}
+
 h2 {
     color: #000;
     text-align: center;
     font-size: 2em;
 }
-
+h1{
+    font-family: 'Lobster', sans-serif;
+}
 .warpper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .tab {
     cursor: pointer;
     padding: 10px 20px;
     margin: 0px 2px;
-    background: rgb(38, 64, 94);
+    background: rgb(77, 108, 131);;
     display: inline-block;
-    color: #fff;
+    color:  #a7d0c0;
     border-radius: 3px 3px 0px 0px;
     box-shadow: 0 0.5rem 0.8rem #00000080;
 }
 
 .panels {
-    background: rgb(8, 8, 8);
+    background: rgb(15, 85, 129);
     box-shadow: 0 2rem 2rem #00000080;
     /* min-height: 200px; */
     width: 100%;
@@ -50,7 +58,7 @@ h2 {
 #one:checked~.tabs #one-tab,
 #two:checked~.tabs #two-tab,
 #three:checked~.tabs #three-tab {
-    background: #5766aaf6;
+    background: rgb(77, 91, 131);
     color: #000;
     border-top: 3px solid #000;
 }

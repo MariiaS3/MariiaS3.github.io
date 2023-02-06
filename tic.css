@@ -2,7 +2,6 @@ body {
     margin: 0;
     background-color: #26282E;
     color: #209781;
-    font-family: 'Lobster', sans-serif;
     font-size: 28px;
 }
 
@@ -24,7 +23,6 @@ a:hover {
 }
 
 h1 {
-    color: rgb(187, 235, 160);
     font-size: 45px;
 }
 
@@ -37,6 +35,11 @@ button {
     padding-left: 20px;
     padding-right: 20px;
     background-color: #209781;
+    border-style: none;
+}
+
+button:hover{
+    background-color: #45c3ab;
 }
 
 .messages {
@@ -92,3 +95,4 @@ button {
     margin-top: 50px;
     letter-spacing: 2px;
 }
+
