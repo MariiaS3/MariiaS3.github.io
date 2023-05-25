@@ -37,15 +37,11 @@ proverbs[34] = "Clothes do not make the man";
 
 var password = proverbs[Math.floor(Math.random() * 26)];
 password = password.toUpperCase();
-
 var size = password.length;
 var password1 = "";
 var count_fail = 0;
 
-
-
 for (i = 0; i < size; i++) {
-
     if (password.charAt(i) == " ") {
         password1 = password1 + " ";
     } else {
@@ -57,10 +53,7 @@ function wypisz_haslo() {
     document.getElementById("board").innerHTML = password1;
 }
 
-
-
 window.onload = start;
-
 var letters = new Array(26);
 
 letters[0] = "A";
