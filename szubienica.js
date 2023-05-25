@@ -143,7 +143,7 @@ function sprawdz(nr) {
         document.getElementById("gallows").innerHTML = '<img src="' + img + ' " alt=""/>';
     }
     if (count_fail >= 9) {
-        document.getElementById("alphabet").innerHTML = "You lose,<br /><br /> The correct password is: " + password + '<br /><br /><span class="reset" onclick="location.reload()" style="background-color:#4db6a3; color:#330000; cursor: pointer;">Click if you want one more time?</span>'
+        document.getElementById("alphabet").innerHTML = "You lose,<br /><br /> The correct password is: " + password + '<br /><br /><span class="reset" style="background-color:#4db6a3; color:#330000; cursor: pointer;">Click if you want one more time?</span>'
         document.getElementById("alphabet").style.color = "#801010";
         document.getElementById("alphabet").style.fontSize = "35px";
         document.getElementById("alphabet").style.float = "left";
@@ -151,7 +151,7 @@ function sprawdz(nr) {
         document.getElementById("two").checked = true;
     }
     if (password == password1) {
-        document.getElementById("alphabet").innerHTML = "You Won ;)" + '<br /><br /><span class="reset" onclick="location.reload()" style="background-color:#4db6a3; color:#003300; cursor: pointer; ">Click if you want one more time?</span>'
+        document.getElementById("alphabet").innerHTML = "You Won ;)" + '<br /><br /><span class="reset"  style="background-color:#4db6a3; color:#003300; cursor: pointer; ">Click if you want one more time?</span>'
         document.getElementById("alphabet").style.color = "#265c06";
         document.getElementById("alphabet").style.fontSize = "35px";
         document.getElementById("alphabet").style.float = "left";
