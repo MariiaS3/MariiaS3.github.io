@@ -148,7 +148,7 @@ function sprawdz(nr) {
         document.getElementById("alphabet").style.fontSize = "35px";
         document.getElementById("alphabet").style.float = "left";
         document.getElementById("alphabet").style.textAlign = "center";
-
+        document.getElementById("two").checked = true;
     }
     if (password == password1) {
         document.getElementById("alphabet").innerHTML = "You Won ;)" + '<br /><br /><span class="reset" onclick="location.reload()" style="background-color:#4db6a3; color:#003300; cursor: pointer; ">Click if you want one more time?</span>'
@@ -156,6 +156,7 @@ function sprawdz(nr) {
         document.getElementById("alphabet").style.fontSize = "35px";
         document.getElementById("alphabet").style.float = "left";
         document.getElementById("alphabet").style.textAlign = "center";
+        document.getElementById("two").checked = true;
 
     }
 
