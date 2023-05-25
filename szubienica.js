@@ -157,23 +157,3 @@ function sprawdz(nr) {
         document.getElementById("alphabet").style.textAlign = "center";
     }
 }
-
-function doNotReload(){
-    let passwTemp = proverbs[Math.floor(Math.random() * 26)];
-    passwTemp = passwTemp.toUpperCase();
-    let len = passwTemp.length;
-    let passwTemp1 = "";
-    
-    for (i = 0; i < size; i++) {
-        if (passwTemp.charAt(i) == " ") {
-            passwTemp1 = passwTemp1 + " ";
-        } else {
-            passwTemp1 += "-";
-        }
-    }
-    
-    wypisz_haslo(passwTemp1);
-    document.getElementById("two").checked = true;
-    document.getElementById("gallows").innerHTML = '<img src=img/s0.jpg alt=""/>';
-    window.onload = start;
-}
