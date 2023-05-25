@@ -53,8 +53,8 @@ for (i = 0; i < size; i++) {
     }
 }
 
-function wypisz_haslo(let passw) {
-    document.getElementById("board").innerHTML = passw;
+function wypisz_haslo() {
+    document.getElementById("board").innerHTML = password1;
 }
 
 
@@ -102,7 +102,7 @@ function start() {
     }
     document.getElementById("alphabet").innerHTML = tresc_diva
 
-    wypisz_haslo(password1);
+    wypisz_haslo();
 }
 
 String.prototype.ustawZnak = function(pos, znak) {
@@ -130,7 +130,7 @@ function sprawdz(nr) {
         document.getElementById(element).style.border = "3px solid #00C000";
         document.getElementById(element).style.cursor = "default";
 
-        wypisz_haslo(password1);
+        wypisz_haslo();
     } else {
         document.getElementById(element).style.background = "#330000";
         document.getElementById(element).style.color = "#C00000";
@@ -143,7 +143,7 @@ function sprawdz(nr) {
         document.getElementById("gallows").innerHTML = '<img src="' + img + ' " alt=""/>';
     }
     if (count_fail >= 9) {
-        document.getElementById("alphabet").innerHTML = "You lose,<br /><br /> The correct password is: " + password + '<br /><br /><span class="reset"  onclick="location.reload()" style="background-color:#4db6a3; color:#330000; cursor: pointer;">Click if you want one more time?</span>'
+        document.getElementById("alphabet").innerHTML = "You lose,<br /><br /> The correct password is: " + password + '<br /><br /><span class="reset" onclick="location.reload()" style="background-color:#4db6a3; color:#330000; cursor: pointer;">Click if you want one more time?</span>'
         document.getElementById("alphabet").style.color = "#801010";
         document.getElementById("alphabet").style.fontSize = "35px";
         document.getElementById("alphabet").style.float = "left";
@@ -156,4 +156,5 @@ function sprawdz(nr) {
         document.getElementById("alphabet").style.float = "left";
         document.getElementById("alphabet").style.textAlign = "center";
     }
+
 }
