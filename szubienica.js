@@ -53,8 +53,8 @@ for (i = 0; i < size; i++) {
     }
 }
 
-function wypisz_haslo() {
-    document.getElementById("board").innerHTML = password1;
+function wypisz_haslo(let passw) {
+    document.getElementById("board").innerHTML = passw;
 }
 
 
@@ -102,7 +102,7 @@ function start() {
     }
     document.getElementById("alphabet").innerHTML = tresc_diva
 
-    wypisz_haslo();
+    wypisz_haslo(password1);
 }
 
 String.prototype.ustawZnak = function(pos, znak) {
@@ -130,7 +130,7 @@ function sprawdz(nr) {
         document.getElementById(element).style.border = "3px solid #00C000";
         document.getElementById(element).style.cursor = "default";
 
-        wypisz_haslo();
+        wypisz_haslo(password1);
     } else {
         document.getElementById(element).style.background = "#330000";
         document.getElementById(element).style.color = "#C00000";
@@ -148,7 +148,6 @@ function sprawdz(nr) {
         document.getElementById("alphabet").style.fontSize = "35px";
         document.getElementById("alphabet").style.float = "left";
         document.getElementById("alphabet").style.textAlign = "center";
-        document.getElementById("two").checked = true;
     }
     if (password == password1) {
         document.getElementById("alphabet").innerHTML = "You Won ;)" + '<br /><br /><span class="reset"  style="background-color:#4db6a3; color:#003300; cursor: pointer; ">Click if you want one more time?</span>'
@@ -156,8 +155,26 @@ function sprawdz(nr) {
         document.getElementById("alphabet").style.fontSize = "35px";
         document.getElementById("alphabet").style.float = "left";
         document.getElementById("alphabet").style.textAlign = "center";
-        document.getElementById("two").checked = true;
-
     }
+}
 
+function doNotReload(){
+    let passwTemp = proverbs[Math.floor(Math.random() * 26)];
+    passwTemp = passwTemp.toUpperCase();
+
+    let len = passwTemp.length;
+    let passwTemp1 = "";
+    
+    for (i = 0; i < size; i++) {
+        if (passwTemp.charAt(i) == " ") {
+            passwTemp1 = passwTemp1 + " ";
+        } else {
+            passwTemp1 += "-";
+        }
+    }
+    
+    wypisz_haslo(passwTemp1);
+    document.getElementById("two").checked = true;
+    document.getElementById("gallows").innerHTML = '<img src=img/s0.jpg alt=""/>';
+    window.onload = start;
 }
