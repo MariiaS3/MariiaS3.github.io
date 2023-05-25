@@ -143,38 +143,17 @@ function sprawdz(nr) {
         document.getElementById("gallows").innerHTML = '<img src="' + img + ' " alt=""/>';
     }
     if (count_fail >= 9) {
-        document.getElementById("alphabet").innerHTML = "You lose,<br /><br /> The correct password is: " + password + '<br /><br /><span class="reset"  onClick="doNotReload()" style="background-color:#4db6a3; color:#330000; cursor: pointer;">Click if you want one more time?</span>'
+        document.getElementById("alphabet").innerHTML = "You lose,<br /><br /> The correct password is: " + password + '<br /><br /><span class="reset"  onClick="location.reload" style="background-color:#4db6a3; color:#330000; cursor: pointer;">Click if you want one more time?</span>'
         document.getElementById("alphabet").style.color = "#801010";
         document.getElementById("alphabet").style.fontSize = "35px";
         document.getElementById("alphabet").style.float = "left";
         document.getElementById("alphabet").style.textAlign = "center";
     }
     if (password == password1) {
-        document.getElementById("alphabet").innerHTML = "You Won ;)" + '<br /><br /><span class="reset" onClick="doNotReload()" style="background-color:#4db6a3; color:#003300; cursor: pointer; ">Click if you want one more time?</span>'
+        document.getElementById("alphabet").innerHTML = "You Won ;)" + '<br /><br /><span class="reset" onClick="location.reload(" style="background-color:#4db6a3; color:#003300; cursor: pointer; ">Click if you want one more time?</span>'
         document.getElementById("alphabet").style.color = "#265c06";
         document.getElementById("alphabet").style.fontSize = "35px";
         document.getElementById("alphabet").style.float = "left";
         document.getElementById("alphabet").style.textAlign = "center";
     }
-}
-
-function doNotReload(){
-    let passwTemp = proverbs[Math.floor(Math.random() * 26)];
-    passwTemp = passwTemp.toUpperCase();
-
-    let len = passwTemp.length;
-    let passwTemp1 = "";
-    
-    for (i = 0; i < size; i++) {
-        if (passwTemp.charAt(i) == " ") {
-            passwTemp1 = passwTemp1 + " ";
-        } else {
-            passwTemp1 += "-";
-        }
-    }
-    
-    wypisz_haslo(passwTemp1);
-    document.getElementById("two").checked = true;
-    document.getElementById("gallows").innerHTML = '<img src=img/s0.jpg alt=""/>';
-    window.onload = start;
 }
